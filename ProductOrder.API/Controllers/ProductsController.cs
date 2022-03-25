@@ -21,6 +21,14 @@ public class ProductsController : ControllerBase
         return Ok(res);
     }
 
+    [HttpGet]
+    [Route("/[controller]/{id}")]
+    public async Task<ActionResult<ProductResponse>> Get(Guid id)
+    {
+        var res = await _mediator.Send(new GetProductByIdQuery(id));
+        return Ok(res);
+    }
+
     [HttpPost]
     public async Task<ActionResult<ProductResponse>> Post([FromBody] CreateProductCommand command)
     {
