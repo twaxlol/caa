@@ -18,9 +18,9 @@ namespace ProductOrder.Application.Handlers
         }
         public async Task<ProductResponse> Handle(CreateProductCommand request, CancellationToken cancellationToken)
         {
-            var entity = _mapper.Map<Product>(request);
-            var ent = await _repo.CreateAsync(entity);
-            var productResponse = _mapper.Map<ProductResponse>(ent);
+            var productEntity = _mapper.Map<Product>(request);
+            await _repo.CreateAsync(productEntity);
+            var productResponse = _mapper.Map<ProductResponse>(productEntity);
             return productResponse;
         }
     }
