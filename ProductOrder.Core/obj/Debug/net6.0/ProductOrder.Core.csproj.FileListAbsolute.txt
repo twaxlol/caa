@@ -1,0 +1,12 @@
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Core\bin\Debug\net6.0\ProductOrder.Core.deps.json
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Core\bin\Debug\net6.0\ProductOrder.Core.dll
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Core\bin\Debug\net6.0\ProductOrder.Core.pdb
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Core\obj\Debug\net6.0\ProductOrder.Core.csproj.AssemblyReference.cache
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Core\obj\Debug\net6.0\ProductOrder.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Core\obj\Debug\net6.0\ProductOrder.Core.AssemblyInfoInputs.cache
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Core\obj\Debug\net6.0\ProductOrder.Core.AssemblyInfo.cs
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Core\obj\Debug\net6.0\ProductOrder.Core.csproj.CoreCompileInputs.cache
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Core\obj\Debug\net6.0\ProductOrder.Core.dll
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Core\obj\Debug\net6.0\refint\ProductOrder.Core.dll
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Core\obj\Debug\net6.0\ProductOrder.Core.pdb
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Core\obj\Debug\net6.0\ref\ProductOrder.Core.dll

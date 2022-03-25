@@ -1,0 +1,12 @@
+GET https://localhost:7068/products
+
+###
+
+POST https://localhost:7068/products
+Content-Type: application/json
+
+{
+    "name": "test3",
+    "description": "test3Desc",
+    "price": 300
+}

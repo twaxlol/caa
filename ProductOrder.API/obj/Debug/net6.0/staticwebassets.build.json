@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "F05sHJSKMshXA2fgl6tcJmwNIw+3D2aH1ZAfC8+Clrg=",
+  "Source": "ProductOrder.API",
+  "BasePath": "_content/ProductOrder.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
