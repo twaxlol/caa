@@ -15,7 +15,6 @@ namespace ProductOrder.Infrastructure.Repositories
         {
             await _context.Set<T>().AddAsync(entity);
             await _context.SaveChangesAsync();
-            return entity;
         }
 
         public async Task DeleteByIdAsync(Guid id)
