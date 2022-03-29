@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "AqZqY6+YbmIwwjDAmj70G1O6vi7YiecMeiDjkzRqpWmUS4A3eij4XNrQyENWIhr1P22uBn2/jdjTJ6Iye6FAEQ==",
+  "dgSpecHash": "Yz7vOCRK4EPXRMOxpDbssVdKxrhmnPReQuPJwpV1xK+GdtJQGgd1Qa6/h2l1LxZmBxBATuYlQFaDfiefTlSTpg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fho.it-minds.dk\\Documents\\caa\\ProductOrder.API\\ProductOrder.API.csproj",
+  "projectFilePath": "C:\\Users\\fho.it-minds.dk\\Documents\\caa\\productorder.api\\ProductOrder.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fho.it-minds.dk\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\fho.it-minds.dk\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\fho.it-minds.dk\\.nuget\\packages\\fluentvalidation\\10.4.0\\fluentvalidation.10.4.0.nupkg.sha512",
+    "C:\\Users\\fho.it-minds.dk\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.4.0\\fluentvalidation.dependencyinjectionextensions.10.4.0.nupkg.sha512",
     "C:\\Users\\fho.it-minds.dk\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\fho.it-minds.dk\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\fho.it-minds.dk\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

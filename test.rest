@@ -6,7 +6,21 @@ POST https://localhost:7068/products
 Content-Type: application/json
 
 {
-    "name": "test3",
+    "name": "test",
     "description": "test3Desc",
-    "price": 300
+    "price": 300,
+    "categoryId": "F8DEE13A-7C65-4F0D-9BE1-08DA118125E4"
+}
+
+###
+
+GET https://localhost:7068/categories
+
+###
+
+POST https://localhost:7068/categories
+Content-Type: application/json
+
+{
+    "name": "ccccccccccccc"
 }

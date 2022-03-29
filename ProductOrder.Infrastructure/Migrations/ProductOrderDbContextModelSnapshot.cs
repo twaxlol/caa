@@ -22,10 +22,28 @@ namespace ProductOrder.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("Category", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+                });
+
             modelBuilder.Entity("ProductOrder.Core.Models.Product", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CategoryId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
@@ -41,23 +59,20 @@ namespace ProductOrder.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products");
+                    b.HasIndex("CategoryId");
 
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("dc18e5ee-ef75-4cd7-89cd-ed4321eb4eb9"),
-                            Description = "test1Desc",
-                            Name = "test1",
-                            Price = 22m
-                        },
-                        new
-                        {
-                            Id = new Guid("39c857ff-bba1-4fd4-99a7-0e3af426d680"),
-                            Description = "test2Desc",
-                            Name = "test2",
-                            Price = 25m
-                        });
+                    b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("ProductOrder.Core.Models.Product", b =>
+                {
+                    b.HasOne("Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
                 });
 #pragma warning restore 612, 618
         }

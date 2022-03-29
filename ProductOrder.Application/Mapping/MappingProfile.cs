@@ -14,6 +14,12 @@ namespace ProductOrder.Application.Mapping
             
             CreateMap<Product, CreateProductCommand>();
             CreateMap<CreateProductCommand, Product>();
+
+            CreateMap<Category, CategoryResponse>();
+            CreateMap<CategoryResponse, Category>();
+
+            CreateMap<Category, CreateCategoryCommand>();
+            CreateMap<CreateCategoryCommand, Category>();
         }
     }
 }

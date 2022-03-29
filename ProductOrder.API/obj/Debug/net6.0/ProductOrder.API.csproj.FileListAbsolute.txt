@@ -70,3 +70,5 @@ C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.API\bin\Debug\net6.0\AutoMap
 C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.API\bin\Debug\net6.0\ProductOrder.Application.dll
 C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.API\bin\Debug\net6.0\ProductOrder.Application.pdb
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.API\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\fho.it-minds.dk\Documents\caa\productorder.api\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

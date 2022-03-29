@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fho.it-minds.dk\\Documents\\caa\\ProductOrder.API\\ProductOrder.API.csproj": {}
+    "C:\\Users\\fho.it-minds.dk\\Documents\\caa\\productorder.api\\ProductOrder.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fho.it-minds.dk\\Documents\\caa\\ProductOrder.API\\ProductOrder.API.csproj": {
+    "C:\\Users\\fho.it-minds.dk\\Documents\\caa\\productorder.api\\ProductOrder.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fho.it-minds.dk\\Documents\\caa\\ProductOrder.API\\ProductOrder.API.csproj",
+        "projectUniqueName": "C:\\Users\\fho.it-minds.dk\\Documents\\caa\\productorder.api\\ProductOrder.API.csproj",
         "projectName": "ProductOrder.API",
-        "projectPath": "C:\\Users\\fho.it-minds.dk\\Documents\\caa\\ProductOrder.API\\ProductOrder.API.csproj",
+        "projectPath": "C:\\Users\\fho.it-minds.dk\\Documents\\caa\\productorder.api\\ProductOrder.API.csproj",
         "packagesPath": "C:\\Users\\fho.it-minds.dk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fho.it-minds.dk\\Documents\\caa\\ProductOrder.API\\obj\\",
+        "outputPath": "C:\\Users\\fho.it-minds.dk\\Documents\\caa\\productorder.api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -55,6 +55,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[11.0.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[10.4.0, )"
             },
             "MediatR": {
               "target": "Package",
@@ -147,6 +151,10 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[11.0.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.4.0, )"
             },
             "MediatR": {
               "target": "Package",

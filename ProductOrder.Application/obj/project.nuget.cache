@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Cshump0guhtPYQEt1y33eMhA9qUjb/2qaaWoi/uK3mj55d5rtO8Qd/kgGtTfZCdSN/ju3B8BMOXmlAE8hFcnOg==",
+  "dgSpecHash": "/xbqhMAQtAmkXVsKTZ0yVcsv6qLftdK62g1sbr+olMQo62pbV0u4tC23OX1HZXocbdUti6fLmMG1NpkzUhk84Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\fho.it-minds.dk\\Documents\\caa\\ProductOrder.Application\\ProductOrder.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fho.it-minds.dk\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\fho.it-minds.dk\\.nuget\\packages\\fluentvalidation\\10.4.0\\fluentvalidation.10.4.0.nupkg.sha512",
     "C:\\Users\\fho.it-minds.dk\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\fho.it-minds.dk\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\fho.it-minds.dk\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

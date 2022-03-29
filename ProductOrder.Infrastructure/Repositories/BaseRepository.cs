@@ -6,7 +6,7 @@ namespace ProductOrder.Infrastructure.Repositories
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : class
     {
-        private readonly ProductOrderDbContext _context;
+        protected readonly ProductOrderDbContext _context;
         public BaseRepository(ProductOrderDbContext context)
         {
             _context = context;
@@ -29,7 +29,7 @@ namespace ProductOrder.Infrastructure.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync()
+        public virtual async Task<IEnumerable<T>> GetAllAsync()
         {
             return await _context.Set<T>().ToListAsync();
         }
