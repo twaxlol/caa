@@ -11,13 +11,20 @@ namespace ProductOrder.Infrastructure.Repositories
         public ProductRepository(ProductOrderDbContext context) : base(context)
         {
         }
+        public override async Task<IEnumerable<Product>> GetAllAsync()
+        {
+            var products = await _context.Set<Product>()
+                .Include(c => c.Category)
+                .ToListAsync();
+            return products;
+        }
 
-            public override async Task<IEnumerable<Product>> GetAllAsync()
-            {
-                var products = await _context.Set<Product>()
-                    .Include(c => c.Category)
-                    .ToListAsync();
-                return products;
-            }
+        public override async Task<Product> CreateAsync(Product entity)
+        {
+            var res = await base.CreateAsync(entity);
+            res.Category = _context.Set<Category>().FirstOrDefault(c => c.Id == entity.CategoryId);
+            return res;
+        }
+
     }
 }

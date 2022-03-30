@@ -38,7 +38,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ProductOrderDbContext>(opt => 
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("Db"), b => b.MigrationsAssembly("ProductOrder.Infrastructure")));
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"), b => b.MigrationsAssembly("ProductOrder.Infrastructure")));
 
 builder.Services.AddTransient<ExcpetionHandlingMiddleware>();
 
@@ -58,5 +58,16 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.UseMiddleware<ExcpetionHandlingMiddleware>();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    var context = services.GetRequiredService<ProductOrderDbContext>();
+    if (context.Database.GetPendingMigrations().Any())
+    {
+        context.Database.Migrate();
+    }
+}
 
 app.Run();
