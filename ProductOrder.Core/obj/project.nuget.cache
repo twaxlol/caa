@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lVEtc/Sf0FRtXXME5qDMeDKFVPF53e+ZmRYmQXeOjIQD0t0DCOB9Ibf/zdatVUx4LazE3uKyQfTP2KJO70ghkw==",
+  "dgSpecHash": "N/CTxk+3EkU+SaJBlAeL1HBbUgrkpoyXAnpvPZZpwAmc1t5UqY8/KRt0lyk8rF7tIdH4OOeZ/B1Ewccdpur8Qg==",
   "success": true,
-  "projectFilePath": "D:\\Github\\Clean-Architecture\\caa\\ProductOrder.Core\\ProductOrder.Core.csproj",
+  "projectFilePath": "C:\\Users\\fho.it-minds.dk\\Documents\\caa\\ProductOrder.Core\\ProductOrder.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -35,4 +35,11 @@ public class ProductsController : ControllerBase
         var res = await _mediator.Send(command);
         return Ok(res);
     }
+
+    [HttpPatch]
+    public async Task<ActionResult<ProductResponse>> Update([FromBody] UpdateProductCommand command)
+    {
+        var res = await _mediator.Send(command);
+        return Ok(res);
+    }
 }

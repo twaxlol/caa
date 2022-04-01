@@ -31,6 +31,7 @@ builder.Services.AddValidatorsFromAssembly(typeof(ValidationBehavior<,>).Assembl
 builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
 builder.Services.AddTransient(typeof(IProductRepository), typeof(ProductRepository));
 builder.Services.AddTransient(typeof(ICategoryRepository), typeof(CategoryRepository));
+builder.Services.AddTransient(typeof(IOrderRepository), typeof(OrderRepository));
 
 // NET
 builder.Services.AddControllers();

@@ -35,7 +35,7 @@ namespace ProductOrder.Infrastructure.Repositories
             var entityToDelete = await _context.Set<T>().FindAsync(id);
             if(entityToDelete is null)
             {
-                throw new Exception();
+                throw new Exception("Not found");
             }
             _context.Set<T>().Remove(entityToDelete);
             await _context.SaveChangesAsync();
@@ -56,10 +56,13 @@ namespace ProductOrder.Infrastructure.Repositories
             return entity;
         }
 
-        public async Task UpdateAsync(T entity)
+        public virtual async Task<T> UpdateAsync(T entity, Guid Id)
         {
-            _context.Set<T>().Update(entity);
+            var foundEntity = await _context.Set<T>().FindAsync(Id);
+            if(foundEntity is null) throw new Exception("Not found");
+            foundEntity = entity;
             await _context.SaveChangesAsync();
+            return foundEntity;
         }
     }
 }

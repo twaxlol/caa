@@ -5,7 +5,7 @@ namespace ProductOrder.Core.Repositories
         public Task<IEnumerable<T>> GetAllAsync();
         public Task<T> GetByIdAsync(Guid id);
         public Task<T> CreateAsync(T entity);
-        public Task UpdateAsync(T entity);
+        public Task<T> UpdateAsync(T entity, Guid Id);
         public Task DeleteByIdAsync(Guid id);
     }
     

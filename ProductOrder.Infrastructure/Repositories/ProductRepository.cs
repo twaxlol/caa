@@ -26,5 +26,14 @@ namespace ProductOrder.Infrastructure.Repositories
             return res;
         }
 
+         public override async Task<Product> UpdateAsync(Product entity, Guid Id)
+        {
+            var dbEntity = await _context.Set<Product>().FindAsync(Id);
+            if(dbEntity is null) throw new Exception("Not found");
+            dbEntity.Stock = entity.Stock;
+            await _context.SaveChangesAsync();
+            return dbEntity;
+        }
+
     }
 }

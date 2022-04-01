@@ -1,34 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Github\\Clean-Architecture\\caa\\ProductOrder.Core\\ProductOrder.Core.csproj": {}
+    "C:\\Users\\fho.it-minds.dk\\Documents\\caa\\ProductOrder.Core\\ProductOrder.Core.csproj": {}
   },
   "projects": {
-    "D:\\Github\\Clean-Architecture\\caa\\ProductOrder.Core\\ProductOrder.Core.csproj": {
+    "C:\\Users\\fho.it-minds.dk\\Documents\\caa\\ProductOrder.Core\\ProductOrder.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Github\\Clean-Architecture\\caa\\ProductOrder.Core\\ProductOrder.Core.csproj",
+        "projectUniqueName": "C:\\Users\\fho.it-minds.dk\\Documents\\caa\\ProductOrder.Core\\ProductOrder.Core.csproj",
         "projectName": "ProductOrder.Core",
-        "projectPath": "D:\\Github\\Clean-Architecture\\caa\\ProductOrder.Core\\ProductOrder.Core.csproj",
-        "packagesPath": "C:\\Users\\frede\\.nuget\\packages\\",
-        "outputPath": "D:\\Github\\Clean-Architecture\\caa\\ProductOrder.Core\\obj\\",
+        "projectPath": "C:\\Users\\fho.it-minds.dk\\Documents\\caa\\ProductOrder.Core\\ProductOrder.Core.csproj",
+        "packagesPath": "C:\\Users\\fho.it-minds.dk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fho.it-minds.dk\\Documents\\caa\\ProductOrder.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\frede\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\fho.it-minds.dk\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

@@ -24,3 +24,31 @@ Content-Type: application/json
 {
     "name": "ccccccccccccc"
 }
+
+###
+
+POST https://localhost:7068/orders
+Content-Type: application/json
+
+{
+    "products": [
+        {
+            "id": "9C2A63F9-EB9F-4E5C-6D93-08DA1183EE08",
+            "quantity": 2
+        },
+        {
+            "id": "461FA512-1AAB-4D5E-D4E0-08DA1186F210",
+            "quantity": 1
+        }
+    ]
+}
+
+###
+
+PATCH https://localhost:7068/products
+Content-Type: application/json
+
+{
+    "id": "461FA512-1AAB-4D5E-D4E0-08DA1186F210",
+    "stock": 50
+}
