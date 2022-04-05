@@ -15,7 +15,14 @@ namespace ProductOrder.Infrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-           modelBuilder.Entity<Product>().Ignore(p => p.Quantity);
+            modelBuilder.Entity<Product>().Ignore(p => p.Quantity);
+
+            modelBuilder
+                .Entity<Order>()
+                .HasMany(o => o.Products)
+                .WithMany(o => o.Orders)
+                .UsingEntity(o => o.ToTable("OrderProducts"));
+
         }
     }
     

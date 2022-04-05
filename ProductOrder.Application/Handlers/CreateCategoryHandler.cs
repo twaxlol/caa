@@ -2,6 +2,7 @@ using AutoMapper;
 using MediatR;
 using ProductOrder.Application.Commands;
 using ProductOrder.Application.Responses;
+using ProductOrder.Core.Models;
 using ProductOrder.Core.Repositories;
 
 namespace ProductOrder.Application.Handlers

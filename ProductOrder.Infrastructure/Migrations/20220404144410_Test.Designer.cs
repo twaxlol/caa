@@ -9,11 +9,11 @@ using ProductOrder.Infrastructure.Data;
 
 #nullable disable
 
-namespace ProductOrder.API.Migrations
+namespace ProductOrder.Infrastructure.Migrations
 {
     [DbContext(typeof(ProductOrderDbContext))]
-    [Migration("20220401103420_mtm")]
-    partial class mtm
+    [Migration("20220404144410_Test")]
+    partial class Test
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,21 +23,6 @@ namespace ProductOrder.API.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
-
-            modelBuilder.Entity("Category", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Categories");
-                });
 
             modelBuilder.Entity("OrderProduct", b =>
                 {
@@ -54,6 +39,21 @@ namespace ProductOrder.API.Migrations
                     b.ToTable("OrderProduct");
                 });
 
+            modelBuilder.Entity("ProductOrder.Core.Models.Category", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+                });
+
             modelBuilder.Entity("ProductOrder.Core.Models.Order", b =>
                 {
                     b.Property<Guid>("Id")
@@ -66,6 +66,21 @@ namespace ProductOrder.API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("ProductOrder.Core.Models.OrderProduct", b =>
+                {
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("OrderId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("ProductId", "OrderId");
+
+                    b.HasIndex("OrderId");
+
+                    b.ToTable("OrderProducts", (string)null);
                 });
 
             modelBuilder.Entity("ProductOrder.Core.Models.Product", b =>
@@ -113,9 +128,28 @@ namespace ProductOrder.API.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("ProductOrder.Core.Models.OrderProduct", b =>
+                {
+                    b.HasOne("ProductOrder.Core.Models.Order", "Order")
+                        .WithMany()
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProductOrder.Core.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("ProductOrder.Core.Models.Product", b =>
                 {
-                    b.HasOne("Category", "Category")
+                    b.HasOne("ProductOrder.Core.Models.Category", "Category")
                         .WithMany()
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)

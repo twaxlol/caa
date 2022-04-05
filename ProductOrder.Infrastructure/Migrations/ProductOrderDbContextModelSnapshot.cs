@@ -22,21 +22,6 @@ namespace ProductOrder.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Category", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Categories");
-                });
-
             modelBuilder.Entity("OrderProduct", b =>
                 {
                     b.Property<Guid>("OrdersId")
@@ -49,7 +34,22 @@ namespace ProductOrder.Infrastructure.Migrations
 
                     b.HasIndex("ProductsId");
 
-                    b.ToTable("OrderProduct");
+                    b.ToTable("OrderProducts", (string)null);
+                });
+
+            modelBuilder.Entity("ProductOrder.Core.Models.Category", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("ProductOrder.Core.Models.Order", b =>
@@ -113,7 +113,7 @@ namespace ProductOrder.Infrastructure.Migrations
 
             modelBuilder.Entity("ProductOrder.Core.Models.Product", b =>
                 {
-                    b.HasOne("Category", "Category")
+                    b.HasOne("ProductOrder.Core.Models.Category", "Category")
                         .WithMany()
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)

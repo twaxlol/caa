@@ -3,24 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace ProductOrder.API.Migrations
+namespace ProductOrder.Infrastructure.Migrations
 {
-    public partial class mtm : Migration
+    public partial class Test : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_Products_Orders_OrderId",
-                table: "Products");
-
-            migrationBuilder.DropIndex(
-                name: "IX_Products_OrderId",
-                table: "Products");
-
-            migrationBuilder.DropColumn(
-                name: "OrderId",
-                table: "Products");
-
             migrationBuilder.CreateTable(
                 name: "OrderProduct",
                 columns: table => new
@@ -55,24 +43,6 @@ namespace ProductOrder.API.Migrations
         {
             migrationBuilder.DropTable(
                 name: "OrderProduct");
-
-            migrationBuilder.AddColumn<Guid>(
-                name: "OrderId",
-                table: "Products",
-                type: "uniqueidentifier",
-                nullable: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Products_OrderId",
-                table: "Products",
-                column: "OrderId");
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Products_Orders_OrderId",
-                table: "Products",
-                column: "OrderId",
-                principalTable: "Orders",
-                principalColumn: "Id");
         }
     }
 }

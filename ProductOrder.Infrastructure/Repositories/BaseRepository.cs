@@ -46,12 +46,12 @@ namespace ProductOrder.Infrastructure.Repositories
             return await _context.Set<T>().ToListAsync();
         }
 
-        public async Task<T> GetByIdAsync(Guid id)
+        public virtual async Task<T> GetByIdAsync(Guid id)
         {
             var entity = await _context.Set<T>().FindAsync(id);
             if(entity is null)
             {
-                throw new Exception();
+                throw new Exception("Not found");
             }
             return entity;
         }

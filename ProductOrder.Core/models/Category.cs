@@ -1,5 +1,8 @@
-public class Category
+namespace ProductOrder.Core.Models
 {
-    public Guid Id { get; set; }
-    public string Name { get; set; }
+    public class Category
+    {
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+    }
 }

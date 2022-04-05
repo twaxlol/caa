@@ -17,37 +17,48 @@ namespace ProductOrder.Infrastructure.Repositories
 
         public override async Task<Order> CreateAsync(Order entity)
         {
-            // using (var dbTransaction = _context.Database.BeginTransactionAsync())
-            // {
-                var order = new Order{TotalPrice = 0, Products = new List<Product>()};
-                foreach(var product in entity.Products)
-                {
-                    var entityProduct = await _context.Set<Product>().AsNoTracking().FirstOrDefaultAsync(p => p.Id == product.Id);
-                    _logger.LogInformation(JsonSerializer.Serialize(entityProduct));
+            var order = new Order { Products = new List<Product>() };
+            await _context.AddAsync(order);
+            foreach (var product in entity.Products)
+            {
+                var dbProduct = await _context.Set<Product>().Include(p => p.Category).FirstOrDefaultAsync(p => p.Id == product.Id);
 
-                    if(entityProduct is null)
-                    {
-                        throw new Exception("Product not found");
-                    }
+                if (dbProduct is null) throw new Exception($"Product was not found with the id: {product.Id}");
 
-                    if(entityProduct.Stock - product.Quantity < 0)
-                    {
-                        throw new Exception("Not enough stock");
-                    }
+                var updatedProductStock = dbProduct.Stock - product.Quantity;
+                if (updatedProductStock < 1) throw new Exception($"Not enough stock of the product with id: {dbProduct.Id}");
+                dbProduct.Stock = updatedProductStock;
 
-                    entityProduct.Stock -= product.Quantity;
-                    await _context.SaveChangesAsync();
+                order.TotalPrice += dbProduct.Price * product.Quantity;
 
-                    order.TotalPrice += entityProduct.Price*product.Quantity;
-                    order.Products.Add(entityProduct);
-                }
-
-            await _context.Set<Order>().AddAsync(order);
-            await _context.SaveChangesAsync();
-            // }
-
+                order.Products.Add(dbProduct);
+                await _context.SaveChangesAsync();
+            }
             return order;
         }
+
+        public override async Task<IEnumerable<Order>> GetAllAsync()
+        {
+            var res = await _context.Set<Order>()
+                .Include(o => o.Products)
+                .ThenInclude(p => p.Category)
+                .ToListAsync();
+
+            return res;
+        }
+
+        public override async Task<Order> GetByIdAsync(Guid id)
+        {
+            var res = await _context.Set<Order>()
+                .Include(o => o.Products)
+                .ThenInclude(p => p.Category)
+                .FirstOrDefaultAsync(o => o.Id == id);
+
+            if (res is null) throw new Exception("Not found");
+            return res;
+        }
+
+
 
     }
     

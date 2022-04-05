@@ -1,6 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using ProductOrder.Application.Commands;
+using ProductOrder.Application.Queries;
 using ProductOrder.Application.Responses;
 
 namespace ProductOrder.API.Controllers
@@ -16,10 +17,18 @@ namespace ProductOrder.API.Controllers
         }
 
         [HttpGet]
-        public async Task<OrderResponse> Get()
+        public async Task<ActionResult<List<OrderResponse>>> Get()
         {
-           // _mediator.Send(new)
-           throw new NotImplementedException();
+            var res = await _mediator.Send(new GetOrdersListQuery());
+            return Ok(res);
+        }
+        
+        [HttpGet]
+        [Route("{id}")]
+        public async Task<ActionResult<OrderResponse>> Get(Guid id)
+        {
+            var res = await _mediator.Send(new GetOrderByIdQuery(id));
+            return Ok(res);
         }
 
         [HttpPost]
