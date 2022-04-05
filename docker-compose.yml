@@ -8,7 +8,9 @@ services:
       MSSQL_SA_PASSWORD: "ElxpmwowGfv451200"
       MSSQL_PID: "Express"
     ports:
-      - "1433:1433" 
+      - "1433:1433"
+    volumes:
+      - sql-data:/var/lib/mysql
 
   productorder.api:
     image: ${DOCKER_REGISTRY-}productorderapi
@@ -17,3 +19,6 @@ services:
       dockerfile: ProductOrder.API/Dockerfile
     ports:
       - "8080:80"
+
+volumes:
+  sql-data:
