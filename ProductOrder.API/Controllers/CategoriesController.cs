@@ -22,6 +22,7 @@ public class CategoriesController : ControllerBase
     }
 
     [HttpPost]
+    [Route("/")]
     public async Task<ActionResult<CategoryResponse>> Post([FromBody] CreateCategoryCommand command)
     {
         var res = await _mediator.Send(command);
