@@ -67,13 +67,13 @@ app.UseMiddleware<ExcpetionHandlingMiddleware>();
 using (var scope = app.Services.CreateScope())
 {
     try{
-var services = scope.ServiceProvider;
+        var services = scope.ServiceProvider;
 
-    var context = services.GetRequiredService<ProductOrderDbContext>();
-    if (context.Database.GetPendingMigrations().Any())
-    {
-        context.Database.Migrate();
-    }
+        var context = services.GetRequiredService<ProductOrderDbContext>();
+        if (context.Database.GetPendingMigrations().Any())
+        {
+            context.Database.Migrate();
+        }
     } catch (Exception e)
     {
         throw new Exception("fffffffffffffffffff", e);
