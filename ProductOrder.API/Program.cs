@@ -39,7 +39,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ProductOrderDbContext>(opt => 
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("Docker"), b => b.MigrationsAssembly("ProductOrder.Infrastructure")));
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("Azure"), b => b.MigrationsAssembly("ProductOrder.Infrastructure")));
 
 builder.Services.AddTransient<ExcpetionHandlingMiddleware>();
 
