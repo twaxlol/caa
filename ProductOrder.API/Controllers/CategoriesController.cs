@@ -5,7 +5,6 @@ using ProductOrder.Application.Queries;
 using ProductOrder.Application.Commands;
 
 [ApiController]
-[Route("[controller]")]
 public class CategoriesController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -15,6 +14,7 @@ public class CategoriesController : ControllerBase
     }
 
     [HttpGet]
+    [Route("/")]
     public async Task<ActionResult<List<CategoryResponse>>> Get()
     {
         var res = await _mediator.Send(new GetCategoryListQuery());
