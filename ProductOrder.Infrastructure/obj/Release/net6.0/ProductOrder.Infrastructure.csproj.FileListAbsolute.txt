@@ -1,0 +1,17 @@
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Infrastructure\bin\Release\net6.0\ProductOrder.Infrastructure.deps.json
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Infrastructure\bin\Release\net6.0\ProductOrder.Infrastructure.runtimeconfig.json
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Infrastructure\bin\Release\net6.0\ProductOrder.Infrastructure.dll
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Infrastructure\bin\Release\net6.0\ProductOrder.Infrastructure.pdb
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Infrastructure\bin\Release\net6.0\ProductOrder.Core.dll
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Infrastructure\bin\Release\net6.0\ProductOrder.Core.pdb
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Infrastructure\obj\Release\net6.0\ProductOrder.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Infrastructure\obj\Release\net6.0\ProductOrder.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Infrastructure\obj\Release\net6.0\ProductOrder.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Infrastructure\obj\Release\net6.0\ProductOrder.Infrastructure.AssemblyInfo.cs
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Infrastructure\obj\Release\net6.0\ProductOrder.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Infrastructure\obj\Release\net6.0\ProductOrder.Infrastructure.csproj.CopyComplete
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Infrastructure\obj\Release\net6.0\ProductOrder.Infrastructure.dll
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Infrastructure\obj\Release\net6.0\refint\ProductOrder.Infrastructure.dll
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Infrastructure\obj\Release\net6.0\ProductOrder.Infrastructure.pdb
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Infrastructure\obj\Release\net6.0\ProductOrder.Infrastructure.genruntimeconfig.cache
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Infrastructure\obj\Release\net6.0\ref\ProductOrder.Infrastructure.dll

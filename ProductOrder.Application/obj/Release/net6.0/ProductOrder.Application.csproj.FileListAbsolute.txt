@@ -1,0 +1,17 @@
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Application\bin\Release\net6.0\ProductOrder.Application.deps.json
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Application\bin\Release\net6.0\ProductOrder.Application.dll
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Application\bin\Release\net6.0\ProductOrder.Application.pdb
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Application\bin\Release\net6.0\ProductOrder.Core.dll
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Application\bin\Release\net6.0\ProductOrder.Infrastructure.dll
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Application\bin\Release\net6.0\ProductOrder.Infrastructure.pdb
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Application\bin\Release\net6.0\ProductOrder.Core.pdb
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Application\obj\Release\net6.0\ProductOrder.Application.csproj.AssemblyReference.cache
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Application\obj\Release\net6.0\ProductOrder.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Application\obj\Release\net6.0\ProductOrder.Application.AssemblyInfoInputs.cache
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Application\obj\Release\net6.0\ProductOrder.Application.AssemblyInfo.cs
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Application\obj\Release\net6.0\ProductOrder.Application.csproj.CoreCompileInputs.cache
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Application\obj\Release\net6.0\ProductOrder.Application.csproj.CopyComplete
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Application\obj\Release\net6.0\ProductOrder.Application.dll
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Application\obj\Release\net6.0\refint\ProductOrder.Application.dll
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Application\obj\Release\net6.0\ProductOrder.Application.pdb
+C:\Users\fho.it-minds.dk\Documents\caa\ProductOrder.Application\obj\Release\net6.0\ref\ProductOrder.Application.dll
